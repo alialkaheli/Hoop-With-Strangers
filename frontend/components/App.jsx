@@ -6,8 +6,8 @@ import { Route } from 'react-router-dom';
 
 const App = () => (
   <div>
-    <header>
-      <h1>Welcome, Hoop With Strangers</h1>
+    <header className="home-tool-bar">
+      <h1 className="logo">Hoop With Strangers</h1>
       <GreetingContainer />
     </header>
     <Route path="/login" component={LoginFormContainer} />
