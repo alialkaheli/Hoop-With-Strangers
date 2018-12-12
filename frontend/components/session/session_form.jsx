@@ -7,15 +7,18 @@ class SessionForm extends React.Component {
       super(props);
       this.state = {
         email: "",
-        password: ""
+        password: "",
+        city: "",
+        fname: "",
       };
+      
       this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.form(user);
     }
 
     update(field) {
@@ -37,9 +40,24 @@ class SessionForm extends React.Component {
     };
 
     render(){
+        let fname = ""
+        let city = ""
+        if(this.props.formType == 'signup'){
+            fname = <label>
+                    First Name: 
+                    <input type="text" value={this.state.fname} onChange={this.update('fname')}/>
+                </label>
+            city = <label>
+                    City: 
+                    <input type="text" value={this.state.fname} onChange={this.update('fname')}/>
+                </label>
+        }
+    
         return(
             <div>
                 <form onSubmit={this.handleSubmit}>
+                    {fname}
+                    <br />
                     <label>
                         Email: 
                         <input type="text" value={this.state.email} onChange={this.update('email')}/>
@@ -50,11 +68,14 @@ class SessionForm extends React.Component {
                         <input type="password" value={this.state.password} onChange={this.update('password')}/>
                     </label>
                     <br />
+                    {city}
+                    <br />
                     <input type="submit" value={this.props.formType} />
                 </form>
 
             </div>
         )
+    
     }
 }
 
