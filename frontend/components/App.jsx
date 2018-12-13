@@ -2,21 +2,23 @@ import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/sign_up_container';
-import { Route } from 'react-router-dom';
+import { Link,Switch, Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute} from '../util/auth_route';
 
 const App = () => (
   <div className='home-content'>
     <header className="home-tool-bar">
-    <h1 className="logo">Hoop With Strangers</h1>
+    <Link to='/' className="logo"><h1>Hoop With Strangers</h1></Link>
       <GreetingContainer />
     </header>
-    <div className="main-container">
-      <div className="credentials-container">
-        <AuthRoute path="/login" component={LoginFormContainer} />
-        <AuthRoute path="/signup" component={SignupFormContainer} />
+    <Switch>
+      <div className="main-container">
+        <div className="credentials-container">
+          <AuthRoute exact path="/login" component={LoginFormContainer} />
+          <AuthRoute exact path="/signup" component={SignupFormContainer} />
+        </div>
       </div>
-    </div>
+    </Switch>
   </div>
 );
 

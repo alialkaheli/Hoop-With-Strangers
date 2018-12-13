@@ -9,7 +9,7 @@ const msp = (state) => {
     return({
         formType: "Sign Up",
         errors: state.errors.session,
-        navLink: <Link to="/login">login</Link>
+        navLink: <Link to="/login">If you have an account, click here to login</Link>
     })
 }
 

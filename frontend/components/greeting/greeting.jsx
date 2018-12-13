@@ -9,9 +9,11 @@ const Greeting = ({ currentUser, logout }) => {
           
           <Link className ="button" to="/signup">Sign up</Link>
           
-          <Link className ="button" to="/">Home</Link>
         </nav>
+        <div className="frontpage">
+        </div>
       </nav>
+      
     );
     const personalGreeting = () => (
       <nav>
