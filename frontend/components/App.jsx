@@ -12,7 +12,7 @@ const App = () => (
     </header>
     <div className="main-container">
       <div className="credentials-container">
-        <AuthRoute path="/login" component={LoginFormContainer} />
+        <Route path="/login" component={LoginFormContainer} />
         <Route path="/signup" component={SignupFormContainer} />
       </div>
     </div>
