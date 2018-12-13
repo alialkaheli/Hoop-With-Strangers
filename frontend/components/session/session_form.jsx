@@ -82,7 +82,7 @@ class SessionForm extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <h1 className="signin">Join game time!</h1>
                     <p className="signin-m">Many strangers had played basketball games with each other. Create an account and you'll be on your way to join basketball games. </p>
-                    {this.renderErrors()}
+                    <p className="error-m">{this.renderErrors()}</p>
                     <label> 
                         <input placeholder="First Name" className="input-box" type="text" value={this.state.fname} onChange={this.update('fname')}/>
                     </label>
@@ -112,7 +112,7 @@ class SessionForm extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <h1 className="signin">Sign in stranger!</h1>
                     <p className="signin-m">It's good to have you back. Sign in here and sign up for your next tea time!</p>
-                    {this.renderErrors()}
+                    <p className="error-m">{this.renderErrors()}</p>
                     <label>
                         <input className="input-box" type="text" placeholder="Email Address" value={this.state.email} onChange={this.update('email')}/>
                     </label>
