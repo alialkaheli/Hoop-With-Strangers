@@ -1,0 +1,1 @@
+json.extract! user, :id, :fname, :email, :city_name

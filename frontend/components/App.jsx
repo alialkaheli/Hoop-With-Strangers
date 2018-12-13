@@ -5,13 +5,17 @@ import SignupFormContainer from './session/sign_up_container';
 import { Route } from 'react-router-dom';
 
 const App = () => (
-  <div>
+  <div className='home-content'>
     <header className="home-tool-bar">
-      <h1 className="logo">Hoop With Strangers</h1>
+    <h1 className="logo">Hoop With Strangers</h1>
       <GreetingContainer />
     </header>
-    <Route path="/login" component={LoginFormContainer} />
-    <Route path="/signup" component={SignupFormContainer} />
+    <div className="main-container">
+      <div className="credentials-container">
+        <AuthRoute path="/login" component={LoginFormContainer} />
+        <Route path="/signup" component={SignupFormContainer} />
+      </div>
+    </div>
   </div>
 );
 

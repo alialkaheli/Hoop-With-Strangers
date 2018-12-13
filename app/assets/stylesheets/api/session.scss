@@ -1,0 +1,41 @@
+.main-container{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #DAD7D4;
+}
+
+.credentials-container{
+    width: 600px;
+    height: 300px;
+}
+
+.input-box{
+    height: 30px;
+    width: 90%;
+    padding: 8px;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+    
+}
+.submit-box{
+    background-color: #FD524A;
+    width: 93%;
+    color: white;
+    padding: 18px;
+    border-radius: 7px; 
+    font-size: 18px;
+    font-weight: bold;
+}
+
+//sign in
+.signin{
+    color: red;
+}
+.signin-m{
+    font-size: 18px;
+}
