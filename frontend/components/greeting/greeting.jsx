@@ -8,6 +8,7 @@ const Greeting = ({ currentUser, logout }) => {
             <Link className ="button" to="/login">Login</Link>
             
             <Link className ="button" to="/signup">Sign up</Link>
+            
           </nav>
         </nav>
         
