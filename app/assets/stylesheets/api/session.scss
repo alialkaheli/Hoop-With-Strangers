@@ -21,7 +21,11 @@
     width: 600px;
     height: 300px;
 }
+
 .input-box{
+    border: 1px solid #E6E4E4;
+    border-radius: 5px;
+    background-color: white;
     height: 30px;
     width: 90%;
     padding: 8px;
@@ -31,8 +35,11 @@
     
 }
 .submit-box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
     background-color: #FD524A;
-    width: 93%;
+    width: 87%;
     color: white;
     padding: 18px;
     border-radius: 7px; 
@@ -42,14 +49,21 @@
 
 .signin{
     color: red;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 10px;
 }
 .signin-m{
     font-size: 18px;
+    padding-bottom: 20px;
 }
 
 .switch{
     font-size:20px;
     text-decoration: none;
+    color: red;
+    padding-top: 10px;
+    padding-left: 50px;
     
 }
 
