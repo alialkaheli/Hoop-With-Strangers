@@ -39,6 +39,25 @@ class SessionForm extends React.Component {
         );
     };
 
+    demoLogin(){
+        if (this.props.formType === "Sign In"){
+    
+          return(
+          <input className="session-submit"
+          onClick={() => {
+            this.setState  ({
+              email: "Guest@guest.com",
+              password: "Guest123"})
+              this.handleSubmit()
+            }
+          }
+          type="submit"
+          value="Demo Login"
+          />
+        )
+      }
+    }
+
     render(){
         // let fname = ""
         // let city = ""
@@ -102,6 +121,7 @@ class SessionForm extends React.Component {
                     <input height="40" className="submit-box" type="submit" value='Join To Play' />
                     <br />
                     <p className="switch">{this.props.navLink}</p>
+                    
                 </form>
 
             </div>
@@ -123,7 +143,9 @@ class SessionForm extends React.Component {
                     <br />
                     <input className="submit-box"type="submit" value={this.props.formType} />
                     <br />
+                    <div class="submit-box">{this.demoLogin()}</div>
                     <p className="switch">{this.props.navLink}</p>
+                    
                 </form>
 
             </div>
