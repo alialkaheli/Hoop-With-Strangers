@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
     end 
 
     def require_login
-        render json: { base: ['invalid'] }, status: 404 if !current_user
+        render json:['invalid'], status: 404 if !current_user
     end 
 
 end
