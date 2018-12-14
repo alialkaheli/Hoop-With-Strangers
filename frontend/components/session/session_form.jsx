@@ -45,7 +45,6 @@ class SessionForm extends React.Component {
 
     demoLogin(){
         if (this.props.formType === "Sign In"){
-    
           return(
           <input className="session-submit"
           onClick={() => {

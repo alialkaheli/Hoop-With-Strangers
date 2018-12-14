@@ -2,22 +2,28 @@ import React from 'react';
 
 const HomePage = () => {
     return(
-        <div class="class-main">
+        <div className="class-main">
             <div className="background-pic">
-
+                <div className="color">
+                    <div className="hook">
+                        <h1 className="m1">Don't play alone</h1>
+                        <p className="m2"> But you realize that when you are at a park alone.</p>
+                        <button className="b1">Join a Squat</button>
+                    </div>
+                </div>
             </div>
-            <div class="description">
-                <div class="detail">
-                    <h1 class="detail-title">Show up to play</h1>
-                    <p class="mes">You and a few others join a host at a court.</p>
+            <div className="description">
+                <div className="detail">
+                    <h1 className="detail-title">Show up to play</h1>
+                    <p className="mes">You and a few others join a host at a court.</p>
                 </div>
-                <div class="detail">
-                    <h1 class="detail-title">Talk and play</h1>
-                    <p class="mes">You will talk and have fun playing.</p>
+                <div className="detail">
+                    <h1 className="detail-title">Talk and play</h1>
+                    <p className="mes">You will talk and have fun playing.</p>
                 </div>
-                <div class="detail">
-                    <h1 class="detail-title">See who wins</h1>
-                    <p class="mes">That's it. No strings attached.</p>
+                <div className="detail">
+                    <h1 className="detail-title">See who wins</h1>
+                    <p className="mes">That's it. No strings attached.</p>
                 </div>
             
             </div>
