@@ -1,3 +1,10 @@
 class City < ApplicationRecord
-    validates :city, inclusion:{ in: ["San Francisco", "New York City", "Los Angeles"]}
+    validates :city, presence: true
+
+    has_many :events,
+    foreign_key: :city_id,
+    class_name: :Event
+
+    
+
 end
