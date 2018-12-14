@@ -1,0 +1,45 @@
+.class-main{
+    height:100%;
+    width: 100%;
+    display: inline-block;
+}
+
+.background-pic{
+    display:flex;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    background: url('https://momentummag.com/wp-content/uploads/2015/06/BELLS_Detroit_0081-Photo-Michelle-Chris-Gerard-WEB.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    background-color:radial-gradient(gray, white);
+    opacity: .5;
+}
+
+.description{
+    background-color: #DCDADA;
+    width:100%;
+    height: 25%;
+    display:flex;
+    justify-content:space-around;
+}
+
+.detail{
+    padding-top: 25px;
+    // padding-left:10px;
+    padding-right: 10px;
+
+}
+
+.detail-title{
+    color:#D23C3C;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom:15px;
+
+}
+
+.mes{
+    font-size:18px;
+}
