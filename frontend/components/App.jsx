@@ -6,6 +6,8 @@ import HomePage from './homepage/home_page';
 import { Link, Switch, Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute} from '../util/auth_route';
 
+import AllCities from './city/all_city_container';
+
 const App = () => (
   <div className='home-content'>
     <header className="home-tool-bar">
@@ -14,11 +16,10 @@ const App = () => (
     </header>
     <div className="credentials-container">
       <Switch>
-        {/* <div className="credentials-container"> */}
           <AuthRoute exact path="/login" component={LoginFormContainer} />
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
+          {/* <ProtectedRoute exact path='/cities' component={AllCities} /> */}
           <Route exact path="/" component={HomePage} />
-        {/* </div>   */}
       </Switch>
       </div>
     
