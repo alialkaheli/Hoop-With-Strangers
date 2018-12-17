@@ -7,7 +7,9 @@ class User < ApplicationRecord
         foreign_key: :user_id,
         class_name: :Event
 
-        
+    has_many :joins,
+    foreign_key: :user_id,
+    class_name: :JoinTable
 
     attr_reader :password
     after_initialize :ensure_token 
