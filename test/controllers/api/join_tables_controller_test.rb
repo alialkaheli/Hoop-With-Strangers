@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CityTest < ActiveSupport::TestCase
+class Api::JoinTablesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
