@@ -1,15 +1,14 @@
 class Event < ApplicationRecord
-    validates :time, :date, :address, presence: true
+    validates :time, :city, :date, :address, presence: true
     
 
     belongs_to :host,
         foreign_key: :user_id,
         class_name: :User
 
-    belongs_to :city,
-        foreign_key: :city_id,
-        class_name: :City
 
-
+    has_many :joins,
+    foreign_key: :event_id,
+    class_name: :JoinTable
 
 end
