@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
     return(
@@ -8,7 +9,7 @@ const HomePage = () => {
                     <div className="hook">
                         <h1 className="m1">Don't play alone</h1>
                         <p className="m2"> But you realize that when you are at a park alone.</p>
-                        <button className="b1">Join a Squat</button>
+                        <Link to="/signup" className="b1">Join a Squat</Link>
                     </div>
                 </div>
             </div>

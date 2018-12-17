@@ -11,8 +11,8 @@ class EventIndex extends React.Component {
     render() {
   
       return (
-        <div>
-          <ul>
+        <div className="event-main">
+          <ul className="event-list">
             {this.props.events.map((event) =>
               <EventIndexItem event={event} deleteEvent={this.props.deleteEvent} key={event.id} />)}
           </ul>

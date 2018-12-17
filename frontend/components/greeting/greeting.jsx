@@ -19,6 +19,7 @@ const Greeting = ({ currentUser, logout }) => {
       <nav className="toolbar-buttons">
         <nav className="button-color">
           <Link className ="button" to="/events">Events</Link>
+          <Link className ="button" to="/events/new">Host</Link>
           <button className ="button1" onClick={logout}>Log Out</button>
         </nav>
       </nav>

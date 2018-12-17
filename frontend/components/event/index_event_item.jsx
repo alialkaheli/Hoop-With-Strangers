@@ -1,17 +1,19 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-const EventIndexItem = ({event, deleteEvent}) => (
+const EventIndexItem = (props) => (
   <li>
-    <Link to={`/events/${event.id}`}><div>
-        {event.time}
-        {event.date}
-        {event.city}
-        {event.address}
-        {event.description}
-        </div></Link>
-    <Link to={`/events/${event.id}/edit`}>Edit</Link>
-    <button onClick={() => deleteEvent(event.id)}>Delete</button>
+    <Link to={`/events/${props.event.id}`}>
+      <div className="event-attr">
+        <p className="event-spec">{props.event.time}</p>
+        <p className="event-spec">{props.event.date}</p>
+        <p className="event-spec">{props.event.city}</p>
+        <p className="event-spec">{props.event.address}</p>
+        <p className="event-spec">{props.event.description}</p>
+      </div>
+    </Link>
+    <Link to={`/events/${props.event.id}/edit`}>Edit</Link>
+    <button onClick={() => props.deleteEvent(props.event.id)}>Delete</button>
   </li>
 );
 

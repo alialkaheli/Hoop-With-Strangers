@@ -4,7 +4,7 @@ import EventShow from './show_event';
 
 const msp = (state, own) => {
     let id = own.match.params.eventId;
-    let event = state.events[id];
+    let event = state.entities.events[id];
     return({
         event: event
     })
