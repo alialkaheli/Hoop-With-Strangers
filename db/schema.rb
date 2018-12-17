@@ -10,17 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_14_201341) do
+ActiveRecord::Schema.define(version: 2018_12_17_042051) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "cities", force: :cascade do |t|
-    t.string "city"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["city"], name: "index_cities_on_city"
-  end
 
   create_table "events", force: :cascade do |t|
     t.string "date", null: false
@@ -28,7 +21,14 @@ ActiveRecord::Schema.define(version: 2018_12_14_201341) do
     t.string "address", null: false
     t.text "description"
     t.integer "user_id", null: false
-    t.integer "city_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "city", null: false
+  end
+
+  create_table "join_tables", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "event_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
