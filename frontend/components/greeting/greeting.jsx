@@ -5,6 +5,8 @@ const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
         <nav className="toolbar-buttons">
           <nav className="button-color">
+          <Link className ="button" to="/events">Events</Link>
+
             <Link className ="button" to="/login">Login</Link>
             
             <Link className ="button" to="/signup">Sign up</Link>
@@ -16,6 +18,7 @@ const Greeting = ({ currentUser, logout }) => {
     const personalGreeting = () => (
       <nav className="toolbar-buttons">
         <nav className="button-color">
+          <Link className ="button" to="/events">Events</Link>
           <button className ="button1" onClick={logout}>Log Out</button>
         </nav>
       </nav>
