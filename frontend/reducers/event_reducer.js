@@ -1,5 +1,5 @@
 import {RECEIVE_EVENTS, RECEIVE_EVENT, REMOVE_EVENT} from '../actions/event_action';
-import {merge} from 'lodash';
+import merge from 'lodash/merge';
 
 const eventReducer = (state={}, action) => {
     Object.freeze(state);
