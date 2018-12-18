@@ -5,11 +5,11 @@ const EventIndexItem = (props) => (
   <li>
     <Link to={`/events/${props.event.id}`}>
       <div className="event-attr">
-        <p className="event-spec">{props.event.time}</p>
-        <p className="event-spec">{props.event.date}</p>
-        <p className="event-spec">{props.event.city}</p>
-        <p className="event-spec">{props.event.address}</p>
-        <p className="event-spec">{props.event.description}</p>
+        <p className="event-date">{props.event.date}</p>
+        <p className="event-time">{props.event.time}</p>
+        <p className="event-address">{props.event.address}</p>
+        <p className="event-url">{props.event.url}</p>
+        
 
       </div>
     </Link>

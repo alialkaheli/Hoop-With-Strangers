@@ -38,6 +38,8 @@ class EventForm extends React.Component {
             <br />
             <textarea className="textarea-box" placeholder="description" type="text" value={this.state.description} onChange={this.update("description")}/>
             <br /> 
+            <input className="input-box" placeholder="Url" type="text" value={this.state.url} onChange={this.update("url")}/>
+            <br />
             <input className="submit-con" type="submit" value={this.props.formType}/>
         </form>
         </div>

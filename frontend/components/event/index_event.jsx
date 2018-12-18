@@ -9,13 +9,20 @@ class EventIndex extends React.Component {
     }
   
     render() {
-      let sf = [];
-      let nyc = [];
-      let miami = [];
-      let events = this.props.events.map((event) =>(
-        <EventIndexItem event={event} deleteEvent={this.props.deleteEvent} key={event.id} />))
-          
-     
+      let sf = this.props.events.map((event) =>{
+        if(event.city === 'San Francisco'){
+           return <EventIndexItem event={event} deleteEvent={this.props.deleteEvent} key={event.id} />}})
+
+      let nyc = this.props.events.map((event) =>{
+        if(event.city === 'New York City'){
+           return <EventIndexItem event={event} deleteEvent={this.props.deleteEvent} key={event.id} />}})
+
+      let miami = this.props.events.map((event) =>{
+        if(event.city === 'Miami'){
+           return <EventIndexItem event={event} deleteEvent={this.props.deleteEvent} key={event.id} />}})
+     let events = this.props.events.map((event) =>{
+      <EventIndexItem event={event} deleteEvent={this.props.deleteEvent} key={event.id} />})
+      
       return (
         <div className="event-content">
         <div className="event-heading">
@@ -27,7 +34,21 @@ class EventIndex extends React.Component {
         </div>
           <div className="event-main">
             <ul className="event-list">
-              {events}
+              <div className="city-arr">
+                <div className="city-box"><p>San Francisco</p>👉</div> {sf}
+              </div>
+            
+             
+              <div className="city-arr">
+                <div className="city-box"><p>New York City </p>👉</div> {nyc} 
+              </div>
+              
+              <div className="city-arr">
+                <div className="city-box"><p>Miami</p> 👉</div> {miami}
+              </div>
+
+
+              {/* {events} */}
             </ul>
           </div>
         </div>

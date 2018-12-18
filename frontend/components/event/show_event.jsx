@@ -21,6 +21,7 @@ class EventShow extends React.Component {
             <p className="date">{event.date}<br /> </p>
             <p className="info">{event.city}<br /> </p>
             <p className="info">{event.address}</p>
+            <p className="info">{event.url}</p>
             
           </div>
           <div className="show-des">
