@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-    validates :time, :city, :date, :address, presence: true
+    validates :time, :city, :date, :address,:url, presence: true
     
 
     belongs_to :host,
