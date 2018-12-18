@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .event-content{
-    height:100%;
+    height:1200px;
     width:100%;
 }
 ////////////////////////////
@@ -55,23 +55,44 @@
 .event-list{
     height: 100%;
     width: 100%;
-    border: 1px solid black;
-    overflow-y: scroll;
-    display: flex;
-    flex-wrap: wrap;
+    // border: 1px solid black;
+    // overflow-y: scroll;
+    
     
 }
 
 .event-attr{
     border: 1px solid red;
-    width: 200px;
+    width: 170px;
     height: 200px;
     padding: 10px;
     background-color: white;
+    margin-right: 20px;
 }
 
 .event-spec{
     padding-bottom: 20px;
+}
+.event-date{
+    font-size:30px; 
+    font-weight: bold;
+}
+.event-time{
+    font-size:18px;
+    font-weight: 600;
+    padding-left: 15px;
+}
+.event-address{
+    font-size: 15px;
+    color: gray;
+    padding-top: 25px;
+}
+.event-url{
+    font-size: 15px;
+    color: gray;
+    padding-top: 25px;
+    height: 25px;
+    border-bottom: 1px solid gray;
 }
 
 .host-form{
@@ -177,4 +198,25 @@
 }
 .host-description{
 
+}
+
+.city-arr{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.city-box{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 25px;
+    color: green;
+    border: 2px solid green;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    margin-left: 80px;
+    width: 180px;
+    height: 230px; 
+    
 }
