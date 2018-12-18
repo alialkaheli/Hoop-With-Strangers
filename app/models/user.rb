@@ -3,7 +3,7 @@ class User < ApplicationRecord
     validates :session_token, :email, uniqueness: true, presence: true
     validates :password, length: {minimum: 6, allow_nil: true}
 
-    has_many :events,
+    has_many :hostee,
         foreign_key: :user_id,
         class_name: :Event
 
