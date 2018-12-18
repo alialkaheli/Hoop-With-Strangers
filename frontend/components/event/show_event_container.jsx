@@ -13,6 +13,7 @@ const msp = (state, own) => {
 const mdp = dispatch => {
     return ({
         fetchEvent: (id) => dispatch(fetchEvent(id)),
+        
     })
 }
 

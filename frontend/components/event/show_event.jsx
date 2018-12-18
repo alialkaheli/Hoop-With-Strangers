@@ -13,13 +13,22 @@ class EventShow extends React.Component {
       return (<div>There none</div>);
     }
     return(
-      <div>
-        {event.time}
-        {event.date}
-        {event.city}
-        {event.address}
-        {event.description}
-        <Link to="/events">Event List</Link>
+      <div className="show-main">
+        <div className="show-content"> 
+          <div className="event-box">
+            <h1 className="toPlay">JOIN TO PLAY</h1>
+            <p className="date">{event.time}<br/></p>
+            <p className="date">{event.date}<br /> </p>
+            <p className="info">{event.city}<br /> </p>
+            <p className="info">{event.address}</p>
+            
+          </div>
+          <div className="show-des">
+            <h1 className="meet-host"> Meet Your Host </h1>
+            <p className="story">Description</p>
+            <p className="host-description">{event.description}</p>
+          </div>
+        </div>
       </div>
     );
   }

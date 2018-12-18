@@ -10,10 +10,11 @@ const EventIndexItem = (props) => (
         <p className="event-spec">{props.event.city}</p>
         <p className="event-spec">{props.event.address}</p>
         <p className="event-spec">{props.event.description}</p>
+
       </div>
     </Link>
     <Link to={`/events/${props.event.id}/edit`}>Edit</Link>
-    <button onClick={() => props.deleteEvent(props.event.id)}>Delete</button>
+    <button onClick={() => props.deleteEvent(props.event)}>Delete</button>
   </li>
 );
 
