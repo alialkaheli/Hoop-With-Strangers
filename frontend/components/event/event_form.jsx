@@ -19,24 +19,28 @@ class EventForm extends React.Component {
     }
 
     render(){
+        
        return(
-        <form onSubmit={this.handleSubmit}>
-            <input placeholder="Date" type="text" value={this.state.date} onChange={this.update("date")}/>
+           <div className="host-main">
+        <form className="host-form" onSubmit={this.handleSubmit} >
+            <h1 className="signin">{this.props.formType}</h1>
+            <input className="input-box" placeholder="Date" type="text" value={this.state.date} onChange={this.update("date")}/>
             <br /> 
-            <input placeholder="time" type="text" value={this.state.time} onChange={this.update("time")}/>
+            <input className="input-box" placeholder="time" type="text" value={this.state.time} onChange={this.update("time")}/>
             <br />
-            <select value={this.state.city} onChange={this.update("city")}>
+            <select className="drop-down-city" value={this.state.city} onChange={this.update("city")}>
                 <option value="San Francisco">San Francisco</option>
                 <option value="Miami">Miami</option>
                 <option value="New York City">New York City</option>
             </select>
             <br />
-            <input placeholder="address" type="text" value={this.state.address} onChange={this.update("address")}/>
+            <input className="input-box" placeholder="address" type="text" value={this.state.address} onChange={this.update("address")}/>
             <br />
-            <input placeholder="description" type="text" value={this.state.description} onChange={this.update("description")}/>
+            <textarea className="textarea-box" placeholder="description" type="text" value={this.state.description} onChange={this.update("description")}/>
             <br /> 
-            <input type="submit" value={this.props.formType}/>
+            <input className="submit-con" type="submit" value={this.props.formType}/>
         </form>
+        </div>
        )
     }
 }
