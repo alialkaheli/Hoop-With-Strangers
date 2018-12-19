@@ -18,8 +18,9 @@ class Dashboard extends React.Component {
                 
                 <div className="dash-content">
                     <div className="dash-side">
-                        <h1>Welcome home!</h1>
-                        <p>What are you grateful for today?</p>
+                        <h1 className="welcome">Welcome home!</h1>
+                        <p className="message">What are you grateful for today?</p>
+                        <div className="join-link"><Link to={'/events'}>Sign up to join a match!</Link></div>
                     </div>
                     <div className="user-events">
                         {/* <div> JOINED
