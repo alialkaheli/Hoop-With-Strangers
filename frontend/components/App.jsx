@@ -12,7 +12,7 @@ import CreateEvent from './event/event_create';
 import EditEvent from './event/event_edit';
 // import AllCities from './city/all_city_container';
 
-import DashBoard from './dashboard/main_dash';
+import DashBoardContainer from './dashboard/main_dash_container';
 
 const App = () => (
   <div className='home-content'>
@@ -31,7 +31,7 @@ const App = () => (
           <ProtectedRoute exact path="/events/new" component={CreateEvent} />
           <ProtectedRoute exact path="/events/:eventId" component={EventShowContainer}/>
           <ProtectedRoute  exact path="/events/:eventId/edit" component={EditEvent} />
-          <ProtectedRoute  exact path="/dashboard" component={DashBoard} />
+          <ProtectedRoute  exact path="/dashboard" component={DashBoardContainer} />
           <Route exact path="/" component={HomePage} />
       </Switch>
       </div>
