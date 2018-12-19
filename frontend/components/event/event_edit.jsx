@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchEvent, updateEvent } from '../../actions/event_action';
 import EventForm from './event_form';
+import {withRouter} from 'react-router-dom';
+
 
 
 const msp = (state, owns) => {
@@ -38,4 +40,4 @@ class EditForm extends React.Component {
   }
 
 
-export default connect(msp, mdp)(EditForm);
+export default withRouter(connect(msp, mdp)(EditForm));

@@ -4,6 +4,7 @@
 .event-content{
     height:1200px;
     width:100%;
+    backgound-color:#f2fcea; 
 }
 ////////////////////////////
 .event-heading{
@@ -13,20 +14,46 @@
     background-color: #f2fcea;
 }
 .event-pic{
-    height: 400px;
+    height: 300px;
     width: 100%;
     // border: 1px solid blue;
-    background: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/02/28/14/basketball-shadow.jpg?w968h681");
+    // background: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/02/28/14/basketball-shadow.jpg?w968h681");
+    background: url("https://images.unsplash.com/photo-1527527753602-fb58e749276a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2875&q=80");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% 100%; 
+    background-size: cover;
+    // background-size: 100% 100%; 
     opacity: .8;
-    
-    
+}
+
+.layer{
+    height: 100%;
+    width: 100%;
+    background: rgba(28, 230, 169, .3);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+    // display: flex;
+    // flex-direction: column;
+    text-align: center;
+}
+.gg{
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+    padding-bottom: 20px
+}
+
+.event-header-text{
+    font-weight: bold;
+    font-size: 40px;
+    color: white
 }
 
 .event-description{
-    height: 300px;
+    height: 400px;
     width: 50%;
     // border: 1px solid blue;
     text-align: center;
@@ -45,9 +72,10 @@
 }
 ////////////////////
 .event-main{
-    height:80%;
+    height:100%;
     width: 100%;
     background-color: #f2fcea;
+    padding-top: 30px;
     
     
 }

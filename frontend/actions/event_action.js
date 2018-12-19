@@ -24,8 +24,8 @@ export const fetchEvents = () => dispatch => {
         dispatch(receiveEvents(events)))
 }
 
-export const fetchEvent = (event) => dispatch => {
-    return EventUtil.fetchEvent(event.id).then(event => 
+export const fetchEvent = (id) => dispatch => {
+    return EventUtil.fetchEvent(id).then(event => 
         dispatch(receiveEvent(event)))
 }
 
