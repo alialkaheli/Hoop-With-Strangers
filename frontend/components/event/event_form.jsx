@@ -15,7 +15,11 @@ class EventForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
+        
         this.props.action(this.state)
+        // .then(action => {
+        //     this.props.history.push(`/events/${action.event.id}`);
+        //   });
     }
 
     render(){
