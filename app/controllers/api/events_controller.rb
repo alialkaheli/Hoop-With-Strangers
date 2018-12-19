@@ -29,9 +29,11 @@ class Api::EventsController < ApplicationController
     
       def destroy
         @event = current_user.hostee.find(params[:id])
-        @event.destroy
-    
-        render :index
+        if @event.destroy
+          render :show
+        else 
+          render json: @event.errors.full_messages, status: 422
+        end
       end
     
       private
