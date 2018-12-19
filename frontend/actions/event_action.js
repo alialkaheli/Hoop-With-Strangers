@@ -39,8 +39,8 @@ export const updateEvent = (event) => dispatch => {
         dispatch(receiveEvent(event)))
 }
 
-export const deleteEvent = (event) => dispatch => {
-    return EventUtil.deleteEvent(event.id).then(event => 
+export const deleteEvent = (id) => dispatch => {
+    return EventUtil.deleteEvent(id).then(event => 
         dispatch(removeEvent(event)))
 }
 
