@@ -15,11 +15,13 @@ class EventForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        
-        this.props.action(this.state)
-        // .then(action => {
-        //     this.props.history.push(`/events/${action.event.id}`);
-        //   });
+        if(this.props.formType==='Create Event'){
+            this.props.action(this.state).then(action => {
+            this.props.history.push(`/events/${action.event.id}`);
+          });
+        } else{
+            this.props.action(this.state)
+        }
     }
 
     render(){
@@ -28,11 +30,12 @@ class EventForm extends React.Component {
            <div className="host-main">
         <form className="host-form" onSubmit={this.handleSubmit} >
             <h1 className="signin">{this.props.formType}</h1>
-            <input className="input-box" placeholder="Date" type="text" value={this.state.date} onChange={this.update("date")}/>
+            <input className="input-box" placeholder="Date" type="date" value={this.state.date} onChange={this.update("date")}/>
             <br /> 
-            <input className="input-box" placeholder="time" type="text" value={this.state.time} onChange={this.update("time")}/>
+            <input className="input-box" placeholder="time" type="time" value={this.state.time} onChange={this.update("time")}/>
             <br />
             <select className="drop-down-city" value={this.state.city} onChange={this.update("city")}>
+                <option value='' disabled selected >SELECT CITY</option>
                 <option value="San Francisco">San Francisco</option>
                 <option value="Miami">Miami</option>
                 <option value="New York City">New York City</option>
