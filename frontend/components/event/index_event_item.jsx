@@ -13,6 +13,15 @@ const EventIndexItem = (props) => (
 
       </div>
     </Link>
+    <Link  to={`/events/${props.event.id}`}>
+      <div hover="Check it out ->" className="event-select">
+      
+        This one ->
+      </div>
+      {/* <div className="hover-ef">
+        Check it out ->
+      </div> */}
+    </Link>
     {/* <Link to={`/events/${props.event.id}/edit`}>Edit</Link>
     <button onClick={() => props.deleteEvent(props.event.id)}>Delete</button> */}
   </li>
