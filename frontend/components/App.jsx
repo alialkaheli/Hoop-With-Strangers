@@ -17,7 +17,7 @@ import DashBoardContainer from './dashboard/main_dash_container';
 const App = () => (
   <div className='home-content'>
     <header className="home-tool-bar">
-    <Link to='/' className="logo"><h1>Hoop With Strangers</h1></Link>
+    <Link to='/' className="logo"><h1>⛹️ Hoop With Strangers</h1></Link>
       <GreetingContainer />
     </header>
     <div className="credentials-container">
