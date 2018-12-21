@@ -1,6 +1,6 @@
 import * as joinUtil from '../util/join_util';
 export const CREATEJOIN = "CREATEJOIN";
-export const DELETEJOIN = "CREATEJOIN";
+export const DELETEJOIN = "DELETEJOIN";
 
 const receiveJoin = payload => ({
     payload, 
@@ -18,8 +18,8 @@ export const createJoin = join => dispatch => {
         dispatch(receiveJoin(payload)))
 }
 
-export const deleteJoin= join => dispatch => {
-    joinUtil.joinDelete(join.id).then(payload => 
+export const deleteJoin= id => dispatch => {
+    joinUtil.joinDestroy(id).then(payload => 
         dispatch(removeJoin(payload)))
 }
 
