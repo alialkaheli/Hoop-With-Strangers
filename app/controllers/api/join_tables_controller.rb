@@ -9,13 +9,13 @@ class Api::JoinTablesController < ApplicationController
       end
     
       def destroy
-        @join = current_user.joins.find(params[:id])
+        @join = current_user.joins.find_by(event_id: params[:id])
         @join.destroy
         render :show
       end
     
       def join_table_params
-        params.require(:join_table).permit(:user_id, :event_id)
+        params.require(:join).permit(:user_id, :event_id)
       end
     
 end
