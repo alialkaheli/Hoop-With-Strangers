@@ -4,9 +4,9 @@ export const RECEIVE_EVENTS = 'RECEIVE_EVENTS';
 export const RECEIVE_EVENT = 'RECEIVE_EVENT';
 export const REMOVE_EVENT = 'REMOVE_EVENT';
 
-const receiveEvents = events => ({
+const receiveEvents = payload => ({
     type: RECEIVE_EVENTS,
-    events: events
+    payload: payload
 });
 
 const receiveEvent = event => ({
@@ -20,8 +20,8 @@ const removeEvent = event => ({
 })
 
 export const fetchEvents = () => dispatch => {
-    return EventUtil.fetchEvents().then(events => 
-        dispatch(receiveEvents(events)))
+    return EventUtil.fetchEvents().then(payload => 
+        dispatch(receiveEvents(payload)))
 }
 
 export const fetchEvent = (id) => dispatch => {
