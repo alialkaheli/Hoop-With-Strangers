@@ -61,9 +61,12 @@
 }
 
 .error-m{
+    // width:100%;
+    // height: 20px;
     font-size: 18px;
     padding-bottom: 20px;
-    color:red;
+    // background-color:#FD524A;
+    color:#FD524A;
 }
 
 .switch{
@@ -79,8 +82,8 @@
 //Logout
 .signup-container{
     padding-top:50px;
-    height: 500px;
-    width: 600px;
+    height: 100%;
+    width: 100%;
 }
 
 

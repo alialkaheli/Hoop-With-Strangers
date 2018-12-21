@@ -53,11 +53,61 @@
 }
 
 .event-description{
-    height: 400px;
+    height: 250px;
     width: 50%;
     // border: 1px solid blue;
     text-align: center;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.shortcuts-outer{
+    width: 100%;
+    height: 120px;
+    
+    // margin-left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.shortcut{
+    height: 100%;
+    width:70%;
+    background-color: #a4fced;
+    border-top: 1px solid #39d5db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.inner-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.hash-links{
+    width:140px;
+    height:35px;
+    border: 1px solid #39d5db;
+    color: rgb(28, 230, 169);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    background-color: white;
+
+}
+.city-header{
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    color: rgb(28, 230, 169);
+
 }
 
 .des-title{
@@ -170,7 +220,7 @@
 
 ////////////show
 .show-main{
-    height:100%;
+    height:1500px;
     width:100%;
     border: 1px solid red;
     background-color: #f2fcea;
@@ -180,15 +230,35 @@
 .show-content{
     display: flex;
     width: 70%;
-    height: 100%;
+    height: 100%;;
     text-align: center;
     margin: 0 auto;
     margin-top: 70px;
+    
+}
+.show-des{
+    margin-left:50px;
+    width: 500px;
+}
+.sidebar{
+    width: 250px;
+    height: 100%;
+    // border: 1px solid red;
+   
+}
+.side-button{
+    height: 30px;
+    width:100%;
+    background-color: #ff8080;
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    // margin-left:10%;
+    padding-top: 15px;
 }
 
-
 .event-box{
-    width: 250px;
+    width: 100%;
     height:300px;
     background-color: white;
     border-radius: 5px;
@@ -224,9 +294,7 @@
     position: center;
     padding-bottom: 10px;
 }
-.host-description{
 
-}
 
 .city-arr{
     display:flex;
@@ -247,4 +315,62 @@
     width: 180px;
     height: 230px; 
     
+}
+
+.event-select{
+    background-color: #a4fced;
+    color: #39d5db;
+    height: 40px;
+    width: 89.5%;
+    border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 10px 10px;
+    z-index: 1;
+    
+}
+.event-select:hover{
+    background-color: #39d5db;
+    color: white;
+}
+
+.hoop-description{
+    margin-top: 20px;
+    height: 550px;
+    width: 80%;
+    background-color: #47d1d1; 
+    padding: 35px;
+    text-align: center;
+}
+.hoop-description h1{
+    padding-bottom: 15px;
+}
+.hoop-description p{
+    padding-bottom: 15px;
+}
+.hoop-description h2{
+    border-bottom: 1px solid blue;
+    width:70px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    margin-left: 65px;
+}
+.hoop-description h3{
+    // border-bottom: 1px solid blue;
+    // width: 80px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    font-size: 30px;
+
+}
+
+.profile-pic{
+    background: url("http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/profile-icon.png");
+    width: 350px;
+    height:300px;
+    background-size: 100% 100%;
+    margin-bottom: 50px;
+    margin-left: 80px;
 }
