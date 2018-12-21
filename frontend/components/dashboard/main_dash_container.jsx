@@ -4,10 +4,13 @@ import { deleteEvent} from '../../actions/event_action';
 
 import Dashboard from './main_dash';
 
+// Object.values(state.entities.events).filter(
+//     event => event.user_id !== state.session.id 
+//   ),
 const msp = state => ({
-    joinedEvents: Object.values(state.entities.events).filter(
-        event => event.host_id !== state.session.id
-      ),
+    joinedEvents: Object.values(state.entities.join)
+        .filter(join => join.user_id === state.session.id)
+        .map(join => state.entities.events[join.event_id]),
     hostedEvents: Object.values(state.entities.events).filter(
     event => event.user_id === state.session.id
     ),
