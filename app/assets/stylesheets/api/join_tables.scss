@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .dash-content{
     width: 100%;
-    height: 1000px; 
+    height: 100%; 
     // border: 1px solid red;
     display: flex;
     background-color: #f2fcea;
@@ -20,6 +20,7 @@
     color: green;
     font-weight: bold;
     font-size: 30px;
+    padding-top:15px;
 }
 .message{
     font-weight: 600;
@@ -44,33 +45,35 @@
 .user-events{
     margin-left: 50px;
 }
+.user-events label h1{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
 
 .edit-btn{
     // height: 20px;
-    width: 50px;
+    // width: 50px;
     background-color: #00cc00;
     padding: 10px 15px;
     border-radius: 10px;
     color: white;
     text-align: center;
     font-weight: 600;
-    background: linear-gradient(to top, #77d42a 5%, #5cb811 100%);
+    // background: linear-gradient(to top, #77d42a 5%, #5cb811 100%);
     background: linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
     // border: 1px solid black;
     
 }
 .edit-btn:hover {
      background: linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
-     background-color: green;
-    //  border:1px solid red;
+    
 }
 
 .hosted-events{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
-
-
-
-
