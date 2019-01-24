@@ -63,8 +63,6 @@ class EventShow extends React.Component {
 
               <p>However, it may bring you comfort to know a little something about your Host and have fun with them. If so, just keep reading</p>
 
-                <h3>👉</h3>
-
                 
             </div>
           </div>
