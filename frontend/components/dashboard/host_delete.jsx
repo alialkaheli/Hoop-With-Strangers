@@ -36,10 +36,10 @@ const HostDelete = (props) => {
         </div>
 
     </Link>
-    <div className="event-select1">
-      <div className="edit-btn"><Link  to={`/events/${props.event.id}/edit`}>Edit</Link></div>
-      <button className="edit-btn" onClick={() => props.deleteEvent(props.event.id)}>Delete</button>
-    </div>
+      <div className="event-select1">
+        <div className="edit-btn"><Link  to={`/events/${props.event.id}/edit`}>Edit</Link></div>
+        <div className="edit-btn" onClick={() => props.deleteEvent(props.event.id)}>Delete</div>
+      </div>
     </div>
 );
   }
