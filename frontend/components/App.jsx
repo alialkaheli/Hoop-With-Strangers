@@ -17,8 +17,10 @@ import DashBoardContainer from './dashboard/main_dash_container';
 const App = () => (
   <div className='home-content'>
     <header className="home-tool-bar">
-    <Link to='/' className="logo"><h1>⛹️ Hoop With Strangers</h1></Link>
+    <Link to='/' className="logo"><div className="logo-header"><mark className="logo-img"></mark> <h1>Hoop With Strangers</h1></div></Link>
+    
       <GreetingContainer />
+      
     </header>
     <div className="credentials-container">
       <Switch>
@@ -35,6 +37,7 @@ const App = () => (
           <Route exact path="/" component={HomePage} />
       </Switch>
       </div>
+      
     
   </div>
 );
