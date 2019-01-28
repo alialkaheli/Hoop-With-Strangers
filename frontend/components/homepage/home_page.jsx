@@ -145,17 +145,17 @@ const HomePage = () => {
 
         <div className="home-footer">
           <div className="list">
-          <div className="list-position">
-            <a className="no-cursor" href="#">About</a>
-            <Link to="/events">Hoop Times</Link>
-            <a href="https://www.facebook.com/ali.alkaheli96">Facebook</a>
-            <a href="https://www.linkedin.com/in/ali-alkaheli-089817124/">
-              LinkedIn
-            </a>
-            <br />
-            <a className="no-cursor" href="#">Terms of Service</a>
-            <a className="no-cursor" href="#">Privacy Policy</a>
-          </div>
+            <div className="list-position">
+                <a className="no-cursor" href="#">About</a>
+                <Link to="/events">Hoop Times</Link>
+                <a href="https://www.facebook.com/ali.alkaheli96">Facebook</a>
+                <a href="https://www.linkedin.com/in/ali-alkaheli-089817124/">
+                LinkedIn
+                </a>
+                <br />
+                <a className="no-cursor" href="#">Terms of Service</a>
+                <a className="no-cursor" href="#">Privacy Policy</a>
+            </div>
         </div>
           <div className="aboutus">
             <p>
