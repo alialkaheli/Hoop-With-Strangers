@@ -67,21 +67,24 @@
 
 .m1{
     font-size: 40px;
-    color: #02E1BA;
-    padding-left: 120px;
+    color: white;
+    padding-left: 30px;
     padding-bottom:20px
 
 }
 .m2{
-    font-size: 25px;
-    padding-bottom: 20px;
+    font-size: 18px;
+    padding-bottom: 30px;
+    color: white;
+    font-weight: 400;
+    // padding-left: 0px;
 
 }
 .b1{
-    margin-left: 160px;
+    margin-left: 20px;
     border-radius: 5px;
     background-color: #02E1BA;
-    width: 200px;
+    width: 350px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -102,10 +105,10 @@
 }
 .list{
     width: 50%;
-    height: 100%;
+    height: 90%;
     display: flex;
     justify-content: flex-end;
-    padding-top: 20px;
+    
 }
 .list-position{
     height: 100%;
@@ -120,7 +123,7 @@
 }
 
 .aboutus p{
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     color:white;
     padding-left: 100px;
     line-height: 30px;
@@ -220,7 +223,7 @@
     height: 60px;
     color: white;
     font-size:20px;
-    margin-right: 170px;
+    // margin-right: 170px;
     border-radius: 10px;
 }
 
