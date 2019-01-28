@@ -22,6 +22,7 @@ const App = () => (
       <GreetingContainer />
       
     </header>
+    
     <div className="credentials-container">
       <Switch>
           <AuthRoute exact path="/login" component={LoginFormContainer} />
@@ -36,7 +37,9 @@ const App = () => (
           <ProtectedRoute  exact path="/dashboard" component={DashBoardContainer} />
           <Route exact path="/" component={HomePage} />
       </Switch>
+      
       </div>
+      
       
     
   </div>
