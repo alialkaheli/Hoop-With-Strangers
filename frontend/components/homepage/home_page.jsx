@@ -39,7 +39,7 @@ const HomePage = () => {
             <p className="hook">SO WHY ARE THOUSANDS OF PEOPLE DOING IT?</p>
             <div className="first-info-set">
               <div className="set-block">
-                <div className="first-img">image</div>
+                <div className="first-img"></div>
                 <div className="description-splash">
                   <h1 className="detail-title">It’s weird.</h1>
                   <p className="mes">
@@ -61,11 +61,11 @@ const HomePage = () => {
                     basically, we manufacture serendipity.
                   </p>
                 </div>
-                <div className="first-img">image2</div>
+                <div className="second-img"></div>
               </div>
 
               <div className="set-block">
-                <div className="first-img">image3</div>
+                <div className="third-img"></div>
                 <div className="description-splash">
                   <h1 className="detail-title">
                     Your hands are made for high fiving!
@@ -78,6 +78,12 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="talk-and-play">
+              <h1>Actually talk with people.</h1>
+              <Link to="/events" className="b1">
+                Checkout Events
+              </Link>
           </div>
         </div>
 
