@@ -49,7 +49,7 @@
 
 .event-header-text{
     font-weight: bold;
-    font-size: 40px;
+    font-size: 18px;
     color: white
 }
 
@@ -112,10 +112,11 @@
 }
 
 .des-title{
-    padding-top: 50px;
+    // padding-top: 15px;
     padding-bottom: 20px;
     font-size: 25px;
     color: #02E1BA;
+    font-weight: 600;
 }
 
 .des-mes{
@@ -139,50 +140,99 @@
     
     
 }
+.event-card{
+    width: 227px;
+    height: 238px;
+    margin-right: 20px;
+    border: 1px solid gray;
+    display: flex;
+
+}
 
 .event-attr{
-    border: 1px solid blue;
-    border-radius: 10px 10px 0 0;
-    width: 220px;
-    height: 250px;
-    // padding: 10px;
-    // background-color: white;
+    background-color: white;
+    width: 227px;
+    height: 238px;
     margin-right: 20px;
+    border: 1px solid gray;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .event-spec{
     padding-bottom: 20px;
 }
 .event-time{
-    font-size:20px;
-    font-weight: 400;
-    padding-left: 15px;
-    padding-bottom:10px;
+
+    font-size:22.5px;
+    font-weight: 600;
+    padding-left: 20px;
+}
+.time{
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 25px;
 }
 .event-address{
     font-size: 15px;
     color: gray;
-    // padding-top: 105px;
-   
-    // border: 1px solid black;
     padding-left:15px;
 }
 .event-address1{
-    font-size: 15px;
+    font-size: 13px;
     color: gray;
     padding-top: 25px;
-    padding-bottom:10px;
+    padding-bottom:5px;
+    padding-left: 25px;
+    font-weight:500;
 }
 .event-url{
     font-size: 15px;
     color: gray;
-    padding-top: 25px;
-    height: 25px;
+    padding-left:15px;
+    padding-bottom: 15px;
+}
+.line-split{
+    width: 88%;
+    margin-right: 15px;
+    margin-left: 15px;
     border-bottom: 1px solid gray;
+}
+.event-attr h5{
+    margin: 0;
+    color: gray;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+    padding-top: 15px;
+}
+.card-top{
+    display: flex;
+    width:100%;
+    height:120px;
+    justify-content: space-between;
+}
+.card-right{
+    height:106px;
+    width: 80px;
+    margin-right: 15px;
+    border: 2px solid #1ce6a9;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    background-color: white;
+    position: relative;
+    bottom: 15px;
+    display: flex;
+    justify-content: center;
+    
+}
+.profile-pic-events{
+    height:80px;
+    width: 50px;
+    margin: 5px;
+    background: url("http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/profile-icon.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .host-form{
@@ -332,10 +382,10 @@
     color: green;
     border: 2px solid green;
     margin-right: 20px;
-    margin-bottom: 50px;
-    margin-left: 80px;
-    width: 200px;
-    height: 300px; 
+    margin-bottom: 150px;
+    margin-left: 150px;
+    width: 225px;
+    height: 225px; 
     
 }
 
