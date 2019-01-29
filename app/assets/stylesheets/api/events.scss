@@ -392,7 +392,6 @@
     height: 225px; 
     
 }
-
 .event-select{
     background-color: #a4fced;
     color: #39d5db;
@@ -406,17 +405,7 @@
     z-index: 1;
     
 }
-.event-select1{
-    height: 60px;
-    width: 91%;
-    border: 1px solid blue;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 0 0 10px 10px;
-    // z-index: 1;
-    
-}
+
 .event-select:hover{
     background-color: #39d5db;
     color: white;
