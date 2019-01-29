@@ -116,14 +116,17 @@
     cursor: no-drop;
     text-align: center;
 }
+
 .no-cursor-fb:hover{
     background-color: blue;
     color:white;
 }
+
 .no-cursor-twitter:hover{
     background-color: rgb(64, 153,255);
     color:white;
 }
+
 .dash-buttons{
     display: flex;
     justify-content: space-between;
