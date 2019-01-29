@@ -157,6 +157,10 @@
     border: 1px solid gray;
     display: flex;
     flex-direction: column;
+    
+}
+.event-attr p{
+ overflow-x: scroll; 
 }
 
 .event-spec{
