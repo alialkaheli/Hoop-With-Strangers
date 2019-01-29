@@ -49,25 +49,6 @@
 }
 
 
-.edit-btn{
-    // height: 20px;
-    // width: 50px;
-    background-color: #00cc00;
-    padding: 10px 15px;
-    border-radius: 10px;
-    color: white;
-    text-align: center;
-    font-weight: 600;
-    // background: linear-gradient(to top, #77d42a 5%, #5cb811 100%);
-    background: linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
-    // border: 1px solid black;
-    
-}
-.edit-btn:hover {
-     background: linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
-    
-}
-
 .hosted-events{
     width: 75%;
     display: flex;
