@@ -2,6 +2,9 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 const UserLeave = (props) => {
+  const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+  let date = new Date(props.event.date).getUTCDay();
+  let weekday = weekdays[date];
   const obj = props.event.date.split("-");
   let yr = obj[0]
 
@@ -21,28 +24,44 @@ const UserLeave = (props) => {
   } else {
     setTime += "AM"
   }
-  return(
-    <div>
+  return <div className="dash-row">
+      <div className="dash-card">
+        <Link to={`/events/${props.event.id}`}>
+          <div className="top-dash-card">
+            <p className="dash-address1">{weekday}</p>
+            <p className="dash-date">
+              {month} {day}
+            </p>
+            <p className="dash-time">{setTime}</p>
+            <p className="dash-address">{props.event.address}</p>
+          </div>
+        </Link>
 
-      <Link to={`/events/${props.event.id}`}>
-        <div className="event-attr">
-          <p className="event-time">
-
-            {month} {day},
-          </p>
-          <p className="event-time">{yr}</p>
-          <p className="event-time">{setTime}</p>
-          <p className="event-address1">Location: </p>
-          <p className="event-address">{props.event.address}</p>
+        <div className="bottom-dash-card">
+          <div className="dash-edit-btn" onClick={() => props.deleteJoin(props.event.id)}>
+            CANCEL MY SPOT
+          </div>
         </div>
-    </Link>
-
-    <div className="event-select1">
-      <div className="edit-btn" onClick={() => props.deleteJoin(props.event.id)}>Leave</div>
-    </div>
-
-  </div>
-);
+      </div>
+      <div className="dash-host">
+        <p>Get to know your host</p>
+        <div className="dash-sub-div">
+          <div className="profile-pic-events" />
+          <p>
+            Keep an eye open for your host! So it's easier, here's what they
+            look like :).
+          </p>
+        </div>
+        <div className="dash-buttons">
+          <button className="no-cursor-fb">
+            Facebook
+          </button>
+          <button className="no-cursor-twitter">
+            Twitter
+          </button>
+        </div>
+      </div>
+    </div>;
 }
 
 export default withRouter(UserLeave);
