@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 const HostDelete = (props) => {
-  const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+ const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
   let date = new Date(props.event.date).getUTCDay();
   let weekday = weekdays[date];
   const obj = props.event.date.split("-");
@@ -38,9 +38,10 @@ const HostDelete = (props) => {
       </Link>
 
       <div className="bottom-dash-card">
-        <div className="dash-edit-btn" onClick={() => props.deleteJoin(props.event.id)}>
-          CANCEL MY SPOT
-          </div>
+        <div className="event-select1">
+          <div className="edit-btn"><Link to={`/events/${props.event.id}/edit`}>Edit</Link></div>
+          <div className="edit-btn" onClick={() => props.deleteEvent(props.event.id)}>Delete</div>
+        </div>
       </div>
     </div>
     <div className="dash-host">
@@ -62,5 +63,6 @@ const HostDelete = (props) => {
       </div>
     </div>
   </div>;
+
   }
 export default withRouter(HostDelete);
