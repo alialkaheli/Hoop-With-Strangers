@@ -24,7 +24,7 @@ class Dashboard extends React.Component {
                   </p>
                   <div className="join-link">
                     <Link to={"/events"}>
-                      Sign up to join a match!
+                    <p>Sign up to join a match!</p>
                     </Link>
                   </div>
                 </div>
