@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import { fetchEvent } from '../../actions/event_action';
 import EventShow from './show_event';
-import {createJoin, deleteJoin} from '../../actions/join_actions';
+import { createJoin, deleteJoin} from '../../actions/join_actions';
+import { updateEvent} from '../../actions/event_action';
 
 const msp = (state, own) => {
     let eid = own.match.params.eventId;
@@ -21,7 +22,8 @@ const mdp = dispatch => {
     return ({
         fetchEvent: (id) => dispatch(fetchEvent(id)),
         createJoin: join => dispatch(createJoin(join)),
-        deleteJoin: id => dispatch(deleteJoin(id))
+        deleteJoin: id => dispatch(deleteJoin(id)),
+        updateEvent: event => dispatch(updateEvent(event))
         
     })
 }
