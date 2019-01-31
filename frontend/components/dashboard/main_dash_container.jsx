@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { deleteJoin} from '../../actions/join_actions';
-import { deleteEvent} from '../../actions/event_action';
+import { deleteEvent, updateEvent } from "../../actions/event_action";
 
 import Dashboard from './main_dash';
 
@@ -19,7 +19,8 @@ const msp = state => ({
 const mdp = dispatch => {
     return ({
         deleteJoin: (id) => dispatch(deleteJoin(id)),
-        deleteEvent: (id) => dispatch(deleteEvent(id))
+        deleteEvent: (id) => dispatch(deleteEvent(id)),
+        updateEvent: event => dispatch(updateEvent(event))
     })
 }
 
