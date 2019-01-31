@@ -48,7 +48,7 @@ return (
         <p className="event-address">{props.event.address}</p>
         <p className="event-url">{props.event.url}</p>
         <div className="line-split" />
-        <h5>SEATS LEFT!</h5>
+        <h5>{props.event.spots} SEATS LEFT!</h5>
       </div>
     </Link>
     <Link to={`/events/${props.event.id}`}>
