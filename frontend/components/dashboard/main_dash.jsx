@@ -34,7 +34,7 @@ class Dashboard extends React.Component {
                   <div className="hosted-events">
                     
                     {this.props.joinedEvents.map(event => {
-                      return <UserLeave key={event.id} event={event} deleteJoin={this.props.deleteJoin} />;
+                    return <UserLeave key={event.id} event={event} deleteJoin={this.props.deleteJoin} updateEvent={this.props.updateEvent}/>;
                     })}
                   </div>
 
