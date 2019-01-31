@@ -6,7 +6,6 @@ const UserLeave = (props) => {
   let date = new Date(props.event.date).getUTCDay();
   let weekday = weekdays[date];
   const obj = props.event.date.split("-");
-  let yr = obj[0]
 
   let day = obj[2]
   const monthName = { "01": "January", "02": "Febuary", "03": "March", "04": "April", "05": "May", "06": "June", "07": "July", "08": "August", "09": "September", "10": "October", "11": "November", "12": "December" };
@@ -38,8 +37,12 @@ const UserLeave = (props) => {
         </Link>
 
         <div className="bottom-dash-card">
-          <div className="dash-edit-btn" onClick={() => props.deleteJoin(props.event.id)}>
+          <div className="dash-edit-btn" onClick={() => {
+            props.deleteJoin(props.event.id);
+            props.event.spots += 1;
+          props.updateEvent(props.event);}} >
             CANCEL MY SPOT
+            
           </div>
         </div>
       </div>
