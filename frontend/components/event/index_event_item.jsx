@@ -27,7 +27,12 @@ const EventIndexItem = (props) => {
   }else{
     setTime += "AM"
   }
-  
+  let spot;
+  if(props.event.spots < 1){
+    spot = "No spots left"
+  }else{
+    spot = props.event.spots + " SEATS LEFT!";
+  }
   
 return (
   <li>
@@ -48,7 +53,7 @@ return (
         <p className="event-address">{props.event.address}</p>
         <p className="event-url">{props.event.url}</p>
         <div className="line-split" />
-        <h5>{props.event.spots} SEATS LEFT!</h5>
+        <h5>{spot}</h5>
       </div>
     </Link>
     <Link to={`/events/${props.event.id}`}>
