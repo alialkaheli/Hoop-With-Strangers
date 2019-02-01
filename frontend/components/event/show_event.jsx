@@ -42,6 +42,39 @@ class EventShow extends React.Component {
         Leave This Game
       </button>
     );
+
+    const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    let date = new Date(event.date).getUTCDay();
+    let weekday = weekdays[date];
+    const obj = event.date.split("-");
+    let yr = obj[0]
+
+    let day = obj[2]
+    const monthName = { "01": "Jan", "02": "Feb", "03": "Mar", "04": "Apr", "05": "May", "06": "Jun", "07": "Jul", "08": "Aug", "09": "Sep", "10": "Oct", "11": "Nov", "12": "Dec" };
+
+    let month = monthName[obj[1]].toString();
+    let ampm = false;
+    let setTime = event.time.split(":")
+
+    if (setTime[0] > 12) {
+      setTime[0] -= 12
+      ampm = true
+    }
+
+
+    setTime = setTime.join(":")
+    if (ampm === true) {
+      setTime += "PM"
+    } else {
+      setTime += "AM"
+    }
+    let spot;
+    if (event.spots < 1) {
+      spot = "No spots left"
+    } else {
+      spot = event.spots + " SEATS LEFT!";
+    }
+
     let name = "";
 
     // if (this.props.currentUserJoin) {
@@ -56,25 +89,39 @@ class EventShow extends React.Component {
         <div className="show-content">
           <div className="sidebar">
             <div className="event-box">
-              <h1 className="toPlay">JOIN TO PLAY</h1>
-              <p className="date">
-                ⏰{event.time}
-                <br />
-              </p>
-              <p className="date">
-                📅{event.date}
-                <br />{" "}
-              </p>
-              <p className="info">
-                🗺{event.city}
-                <br />{" "}
-              </p>
-              <p className="info">📍{event.address}</p>
-              <p className="info">🗣{event.url}</p>
-              <p className="info">🗣{event.spots}</p>
+              <h1 className="toPlay">JOIN FOR HOOP TIME</h1>
+              <div className="show-line" />
+              <div className="event-show-event">
+                <p className="date">
+                  📅 {weekday}, {month} {day}
+                  <br />
+                </p>
+                <p className="date">
+                  ⏰{setTime}
+                  <br />
+                </p>
+                <p className="info">📍{event.address}</p>
+                <p className="info">
+                  🗺{event.city}
+                  <br />
+                </p>
+
+                <p className="info">🗣{event.url}</p>
+                <div className="info-last">
+                  ☝🏽 <p className="info">
+                    Send to a friend that should be here (especially if you
+                    can't come yourself!)
+                  </p>
+                </div>
+              </div>
+              <div className="show-line" />
+              <p className="info">{spot}</p>
             </div>
+
             {/* onClick={this.handleButton.bind(this)} */}
-          <div className="side-button" onClick={this.handleButton.bind(this)} >{actionButton}</div>
+            <div className="side-button" onClick={this.handleButton.bind(this)}>
+              {actionButton}
+            </div>
             <div className="hoop-description">
               <h1>WHAT IS BASKETBALL TIME, EXACTLY? </h1>
 
@@ -100,9 +147,16 @@ class EventShow extends React.Component {
           </div>
           <div className="show-des">
             <h1 className="meet-host"> Get To Meet Your Host </h1>
+            <p className="info">
+              (It'll be helpful to know what they look like when you're
+              looking for a group of confused strangers at the basketball
+              court.)
+            </p>
             <div className="profile-pic" />
-            <p className="story">Description</p>
-            <p className="host-description">{event.description}</p>
+            <div className="show-description">
+              <p className="story">Description</p>
+              <p className="host-description">{event.description}</p>
+            </div>
           </div>
         </div>
       </div>;
