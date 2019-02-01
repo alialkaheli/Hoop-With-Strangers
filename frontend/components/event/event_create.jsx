@@ -3,7 +3,7 @@ import { fetchEvent, createEvent } from '../../actions/event_action';
 import EventForm from './event_form';
 
 const msp = () => {
-    let event = {date: "", time: "", address: "", city: "", description: "", url: "" };
+    let event = {date: "", time: "", address: "", city: "", description: "" };
     let formType = "Create Event";
     
     return({

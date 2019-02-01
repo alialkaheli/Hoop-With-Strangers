@@ -106,7 +106,12 @@ class EventShow extends React.Component {
                   <br />
                 </p>
 
-                <p className="info">🗣{event.url}</p>
+                <div className="info-last">
+                  🗣 <p className="info">
+                    https://hoop-with-strangers.herokuapp.com/#/events/
+                    {event.id}
+                  </p>
+                </div>
                 <div className="info-last">
                   ☝🏽 <p className="info">
                     Send to a friend that should be here (especially if you
