@@ -181,6 +181,7 @@
     font-size: 15px;
     color: gray;
     padding-left:15px;
+    padding-bottom:15px;
 }
 .event-address1{
     font-size: 13px;
@@ -370,6 +371,8 @@
     color: gray;
     padding-bottom: 5px;
     font-size: 14px;
+    overflow-x: scroll;
+
 }
 .info-last{
     display: flex;
