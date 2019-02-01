@@ -51,7 +51,7 @@ return (
           </div>
         </div>
         <p className="event-address">{props.event.address}</p>
-        <p className="event-url">{props.event.url}</p>
+        
         <div className="line-split" />
         <h5>{spot}</h5>
       </div>
