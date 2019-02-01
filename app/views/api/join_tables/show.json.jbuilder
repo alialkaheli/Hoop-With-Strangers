@@ -3,7 +3,7 @@ json.join do
 end
 
 json.event do
-  json.extract! @join.event, :id, :user_id, :date, :spots, :time, :address, :city, :description, :url 
+  json.extract! @join.event, :id, :user_id, :date, :spots, :time, :address, :city, :description 
   json.host do
     json.extract! @join.event.host, :id, :fname, :email
   end
