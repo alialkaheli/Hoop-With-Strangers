@@ -51,12 +51,14 @@
     color: green;
     font-size: 11px;
     font-weight: 600;
+    cursor: pointer;
 }
 .edit-btn{
     padding-left: 15px;
     color: green;
     font-size: 14px;
     font-weight: 600;
+    cursor: pointer;
 }
 .user-events h1{
     color: green;
@@ -146,4 +148,14 @@
    width: 100%;
    justify-content: space-around;
     
+}
+
+.dash-sub-div .profile-pic-events {
+    padding:5px 10px;
+}
+
+.dash-page{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
