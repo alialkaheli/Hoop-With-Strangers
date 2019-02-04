@@ -53,7 +53,7 @@ class EventIndex extends React.Component {
           
         </div>
           <div className="event-main">
-            <ul className="event-list">
+            <div className="event-list">
               <div id="ca" className="city-arr">
                 
                 <div className="city-box"><p >San Francisco</p>👉</div> {sf}
@@ -70,7 +70,7 @@ class EventIndex extends React.Component {
 
 
               {/* {events} */}
-            </ul>
+            </div>
           </div>
         </div>
       );
