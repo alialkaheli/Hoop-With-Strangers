@@ -47,7 +47,9 @@ const HostDelete = (props) => {
     <div className="dash-host">
       <p>Get to know your host</p>
       <div className="dash-sub-div">
-        <div className="profile-pic-events" />
+        <div className="profile-pic-events">
+          <img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/profile-icon.png" />
+        </div>
         <p>
           Keep an eye open for your host! So it's easier, here's what they
           look like :).
