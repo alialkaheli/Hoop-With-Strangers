@@ -47,7 +47,9 @@ return (
             <p className="time">{setTime}</p>
           </div>
           <div className="card-right">
-            <div className="profile-pic-events" />
+            <div className="profile-pic-events">
+              <img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/profile-icon.png"/>
+            </div>
           </div>
         </div>
         <p className="event-address">{props.event.address}</p>
