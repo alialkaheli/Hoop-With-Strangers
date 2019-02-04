@@ -38,7 +38,10 @@ const HomePage = () => {
             <p className="hook">SO WHY ARE THOUSANDS OF PEOPLE DOING IT?</p>
             <div className="first-info-set">
               <div className="set-block">
-                <div className="first-img" />
+                <div className="first-img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbVIpAl5eGuPxvaY75w-Iq6aKS6p_rv9OC9QCR_IS5A4dU96Fg"/>
+                </div>
+
                 <div className="description-splash">
                   <h1 className="detail-title">It’s weird.</h1>
                   <p className="mes">
@@ -60,11 +63,15 @@ const HomePage = () => {
                     basically, we manufacture serendipity.
                   </p>
                 </div>
-                <div className="second-img" />
+                <div className="second-img">
+                <img src="https://t4.ftcdn.net/jpg/02/18/60/45/240_F_218604505_VrmhtKzNcZgMaz7uz6K4CHzzXRJ2fd90.jpg"/>
+                </div>
               </div>
 
               <div className="set-block">
-                <div className="third-img" />
+                <div className="third-img">
+                <img src="https://us.123rf.com/450wm/lmazzochi/lmazzochi1702/lmazzochi170200031/72689194-stock-vector-white-business-woman-and-indian-business-men-doing-high-five-teamwork-and-success-concept-.jpg?ver=6"/>
+                </div> 
                 <div className="description-splash">
                   <h1 className="detail-title">
                     Your hands are made for high fiving!
@@ -103,12 +110,16 @@ const HomePage = () => {
               <div className="comment-line" />
             </div>
           </div>
-          <div className="fourth-img" />
+          <div className="fourth-img">
+          <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v211batch10-gift-73-socialmedia_2.jpg?auto=format&con=3&cs=srgb&dpr=1&fm=jpg&ixlib=php-1.1.0&mark=rawpixel-watermark.png&markalpha=90&markpad=13&markscale=10&markx=25&q=75&usm=15&vib=3&w=1400&s=cb83fb82c7ed838eafe470d387034a50"/>
+          </div>
 
           <div className="last-content">
             <p className="hook">THERE'S NO SUCH THING AS A STRANGER.</p>
             <div className="no-stranger-quote">
-              <div className="last-img" />
+              <div className="last-img">
+              <img src="https://images.all-free-download.com/images/graphiclarge/lifestyle_background_cheering_friends_outdoor_camping_icons_6838569.jpg"/>
+              </div>
               <div className="description-splash">
                 <p className="stranger-mes">
                   You'd never think of yourself as a stranger. But everyone
