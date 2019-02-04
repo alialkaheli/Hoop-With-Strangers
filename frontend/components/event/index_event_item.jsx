@@ -35,7 +35,7 @@ const EventIndexItem = (props) => {
   }
   
 return (
-  <li>
+  <div>
     <Link to={`/events/${props.event.id}`}>
       <div className="event-attr">
         <div className="card-top">
@@ -63,7 +63,7 @@ return (
     </Link>
     {/* <Link to={`/events/${props.event.id}/edit`}>Edit</Link>
     <button onClick={() => props.deleteEvent(props.event.id)}>Delete</button> */}
-  </li>
+  </div>
 );
   }
 
