@@ -11,15 +11,15 @@ class EventIndex extends React.Component {
     render() {
       let sf = this.props.events.map((event) =>{
         if(event.city === 'San Francisco'){
-           return <EventIndexItem event={event} deleteEvent={this.props.deleteEvent} key={event.id} />}})
+           return <EventIndexItem owner={this.props.owner} event={event} deleteEvent={this.props.deleteEvent} key={event.id} />}})
 
       let nyc = this.props.events.map((event) =>{
         if(event.city === 'New York City'){
-           return <EventIndexItem event={event} deleteEvent={this.props.deleteEvent} key={event.id} />}})
+          return <EventIndexItem owner={this.props.owner} event={event} deleteEvent={this.props.deleteEvent} key={event.id} />}})
 
       let miami = this.props.events.map((event) =>{
         if(event.city === 'Miami'){
-           return <EventIndexItem event={event} deleteEvent={this.props.deleteEvent} key={event.id} />}})
+          return <EventIndexItem owner={this.props.owner} event={event} deleteEvent={this.props.deleteEvent} key={event.id} />}})
      let events = this.props.events.map((event) =>{
       <EventIndexItem event={event} deleteEvent={this.props.deleteEvent} key={event.id} />})
       

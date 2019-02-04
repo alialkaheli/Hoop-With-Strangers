@@ -51,8 +51,7 @@ const HostDelete = (props) => {
           <img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/profile-icon.png" />
         </div>
         <p>
-          Keep an eye open for your host! So it's easier, here's what they
-          look like :).
+          Your are the host good luck with your meet up :).
           </p>
       </div>
       <div className="dash-buttons">

@@ -2,7 +2,8 @@ import { connect } from 'react-redux';
 import { fetchEvents, deleteEvent } from '../../actions/event_action';
 import EventIndex from './index_event';
 
-const msp = state => {
+const msp = (state, props )=> {
+    debugger
     let events = Object.values(state.entities.events)
     return({
         events: events

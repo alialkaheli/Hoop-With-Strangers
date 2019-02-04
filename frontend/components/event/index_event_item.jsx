@@ -33,7 +33,6 @@ const EventIndexItem = (props) => {
   }else{
     spot = props.event.spots + " SEATS LEFT!";
   }
-  
 return (
   <div>
     <Link to={`/events/${props.event.id}`}>
@@ -50,6 +49,7 @@ return (
             <div className="profile-pic-events">
               <img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/profile-icon.png"/>
             </div>
+            {props.event.fname}
           </div>
         </div>
         <p className="event-address">{props.event.address}</p>

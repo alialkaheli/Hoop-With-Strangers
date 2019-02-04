@@ -53,7 +53,7 @@ const UserLeave = (props) => {
           <img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/profile-icon.png" />
         </div>
           <p>
-            Keep an eye open for your host! So it's easier, here's what they
+            Keep an eye open for your {props.event.fname}! So it's easier, here's what they
             look like :).
           </p>
         </div>
