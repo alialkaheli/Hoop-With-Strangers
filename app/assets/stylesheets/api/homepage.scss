@@ -94,7 +94,7 @@
 
 .home-footer{
     width: 100%;
-    height: 300px;
+    height: 100%;
     display: flex;
     justify-items: center;
     align-items: center;
@@ -165,42 +165,48 @@
 
 .set-block{
     width:100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     
 }
 
 .first-img{
-    width:100%;
+    width:80%;
     height: 300px;
+    padding-right: 15px;
 }
 .description-splash{
-    // padding-top:50px;
     width: 100%;
-    height: 300px;
+    height: 100%;
 }
 
-.first-img{
-    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbVIpAl5eGuPxvaY75w-Iq6aKS6p_rv9OC9QCR_IS5A4dU96Fg");
-    background-size: 90% 70%;
-    background-repeat: no-repeat;
+.first-img img{
+    object-fit: contain;
+    padding-top:20%;
 }
 .second-img{
-    width:100%;
+    width:80%;
     height: 300px;
-    // border: 1px solid black;
-    background: url("https://t4.ftcdn.net/jpg/02/18/60/45/240_F_218604505_VrmhtKzNcZgMaz7uz6K4CHzzXRJ2fd90.jpg");
-    background-size: 90% 70%;
-    background-repeat: no-repeat;
+}
+.second-img img{
+    object-fit: contain;
+    padding-top: 20%;
+    margin-left: 15px;
+    
+}
+.third-img{
+
+    width:80%;
+    height: 300px;
+    padding-right: 15px;
 }
 
-.third-img{
-    width:100%;
-    background: url("https://us.123rf.com/450wm/lmazzochi/lmazzochi1702/lmazzochi170200031/72689194-stock-vector-white-business-woman-and-indian-business-men-doing-high-five-teamwork-and-success-concept-.jpg?ver=6");
-    height: 300px;
-    background-size: 90% 70%;
-    background-repeat: no-repeat;
+.third-img img{
+    object-fit: contain;
+    height:80%;
+    padding-top: 10%;
 }
 
 .talk-and-play{
@@ -261,17 +267,20 @@
 }
 
 .fourth-img{
-    background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v211batch10-gift-73-socialmedia_2.jpg?auto=format&con=3&cs=srgb&dpr=1&fm=jpg&ixlib=php-1.1.0&mark=rawpixel-watermark.png&markalpha=90&markpad=13&markscale=10&markx=25&q=75&usm=15&vib=3&w=1400&s=cb83fb82c7ed838eafe470d387034a50");
-    background-size: 90% 100%;
-    background-repeat: no-repeat;
+    // background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v211batch10-gift-73-socialmedia_2.jpg?auto=format&con=3&cs=srgb&dpr=1&fm=jpg&ixlib=php-1.1.0&mark=rawpixel-watermark.png&markalpha=90&markpad=13&markscale=10&markx=25&q=75&usm=15&vib=3&w=1400&s=cb83fb82c7ed838eafe470d387034a50");
+    // background-size: 90% 100%;
+    // background-repeat: no-repeat;
     width:350px;
     height: 320px;
     margin-bottom:30px;
 }
+.fourth-img img{
+    object-fit: contain;
+}
 
 .last-content{
     width: 100%;
-    height: 650px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -289,10 +298,15 @@
 .last-img{
     width: 100%;
     height: 80%;
-    background-image: url("https://images.all-free-download.com/images/graphiclarge/lifestyle_background_cheering_friends_outdoor_camping_icons_6838569.jpg");
-    background-size: 90% 70%;
-    background-repeat: no-repeat;
+    // background-image: url("https://images.all-free-download.com/images/graphiclarge/lifestyle_background_cheering_friends_outdoor_camping_icons_6838569.jpg");
+    // background-size: 90% 70%;
+    // background-repeat: no-repeat;
     // margin-top: 50px;
+}
+.last-img{
+
+    object-fit: contain;
+    margin-right: 25px;
 }
 
 .stranger-mes{
