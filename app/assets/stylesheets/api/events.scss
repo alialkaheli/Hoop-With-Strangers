@@ -223,7 +223,7 @@
     justify-content: space-between;
 }
 .card-right{
-    height:106px;
+    height:100px;
     width: 80px;
     margin-right: 15px;
     border: 2px solid #1ce6a9;
@@ -234,6 +234,9 @@
     bottom: 15px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom:10px;
     
 }
 .profile-pic-events{
