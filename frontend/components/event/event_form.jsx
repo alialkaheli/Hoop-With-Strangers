@@ -35,7 +35,7 @@ class EventForm extends React.Component {
             <input className="input-box" placeholder="time" type="time" value={this.state.time} onChange={this.update("time")}/>
             <br />
             <select className="drop-down-city" value={this.state.city} onChange={this.update("city")}>
-                <option value='' disabled selected >SELECT CITY</option>
+                <option value='' hidden  >SELECT CITY</option>
                 <option value="San Francisco">San Francisco</option>
                 <option value="Miami">Miami</option>
                 <option value="New York City">New York City</option>
