@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class EventShow extends React.Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchEvent(this.props.match.params.eventId);
   }
 
@@ -24,24 +24,27 @@ class EventShow extends React.Component {
     }
 
     // debugger
-    let joinButton = (
-      <button
-        onClick={() =>
+    let joinButton = <button className="side-button"
+        onClick={() => {
           this.props.createJoin({
             event_id: this.props.match.params.eventId,
             user_id: this.props.currentUserId
-          })
+          })}
         }
       >
         SIGN ME UP!
       </button>
-    );
+    ;
+    let deleteButton = <button className="side-button" onClick={() => {
+          this.props.deleteEvent(this.props.event.id);
+          this.props.history.push("/events");
+        }}>
+        Delete This Game
+      </button>;
 
-    let leaveButton = (
-      <button onClick={() => this.props.deleteJoin(this.props.event.id)}>
+    let leaveButton = <button className="side-button" onClick={() => this.props.deleteJoin(this.props.event.id)}>
         Leave This Game
-      </button>
-    );
+      </button>;
 
     const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     let date = new Date(event.date).getUTCDay();
@@ -84,6 +87,19 @@ class EventShow extends React.Component {
     // }
 
     let actionButton = this.props.currentUserJoin ? leaveButton : joinButton;
+
+    if (this.props.currentUserId === this.props.event.user_id){
+      actionButton = deleteButton;
+      
+    }
+    else if(this.props.currentUserJoin){
+      actionButton = leaveButton;
+    }else if(event.spots <= 0){
+      actionButton = "Event is full"
+    }
+    else{
+      actionButton = joinButton;
+    }
     // debugger
     return <div className="show-main">
         <div className="show-content">
@@ -124,7 +140,7 @@ class EventShow extends React.Component {
             </div>
 
             {/* onClick={this.handleButton.bind(this)} */}
-            <div className="side-button" onClick={this.handleButton.bind(this)}>
+            <div onClick={this.handleButton.bind(this)}>
               {actionButton}
             </div>
             <div className="hoop-description">
@@ -157,7 +173,9 @@ class EventShow extends React.Component {
               looking for a group of confused strangers at the basketball
               court.)
             </p>
-            <div className="profile-pic" />
+            <div className="profile-pic">
+                <img src={event.image}/>
+            </div>
             <div className="show-description">
               <p className="story">Description</p>
               <p className="host-description">{event.description}</p>
