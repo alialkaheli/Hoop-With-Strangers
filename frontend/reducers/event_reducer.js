@@ -5,7 +5,12 @@ const eventReducer = (state={}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_EVENTS:
+            if (Object.keys(action.payload).length){
             return action.payload.events;
+            }
+            else{
+                return action.payload
+            }
         case RECEIVE_EVENT:
             return merge({}, state, {[action.event.id]: action.event});
         case REMOVE_EVENT:
