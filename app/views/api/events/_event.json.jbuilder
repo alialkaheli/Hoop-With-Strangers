@@ -1,2 +1,4 @@
-json.extract! event, :id, :user_id, :spots, :date, :time, :address, :city, :description 
-json.fname event.host.fname
+json.extract! event, :id, :user_id, :spots, :date, :time, :address, :city, :description
+
+    json.fname event.host.fname
+    json.image event.host.image
