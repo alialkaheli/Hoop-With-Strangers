@@ -337,14 +337,14 @@
    
 }
 .side-button{
-    height: 30px;
+    height: 50px;
     width:100%;
     background-color: #ff8080;
     color: white;
     border-radius: 10px;
     margin-top: 20px;
     // margin-left:10%;
-    padding-top: 15px;
+    // padding-top: 15px;
 }
 
 .event-box{
@@ -492,10 +492,14 @@
 }
 
 .profile-pic{
-    background: url("http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/profile-icon.png");
+    // background: url("http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/profile-icon.png");
     width: 350px;
     height:300px;
-    background-size: 100% 100%;
+    // background-size: 100% 100%;
     margin-bottom: 50px;
     margin-left: 80px;
+}
+.profile-pic img{
+    object-fit: contain;
+    height: 100%;
 }

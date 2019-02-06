@@ -86,4 +86,18 @@
     width: 600px;
 }
 
+.profile-image-div{
+    height: 100px;
+    width:100px;
+    margin-right: 15px;
+    margin-bottom:20px;
+}
+.profile-image-div img{
+    object-fit: cover;
+    height:100%;
+
+}
+.options-profile-img{
+    display: flex;
+}
 
