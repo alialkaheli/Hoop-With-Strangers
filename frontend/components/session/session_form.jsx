@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
         password: "",
         city_name: "",
         fname: "",
+        image: ""
       };
       
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -99,40 +100,68 @@ class SessionForm extends React.Component {
         // )
         let error =""
         if(!!this.renderErrors() === true){
-            error = <p className="error-m">{this.renderErrors()}</p>
+            error = <h1 className="error-m">{this.renderErrors()}</h1>
         }
         if(this.props.formType ==='Sign Up'){
-            return(
-                <div className="signup-container">
+            return <div className="signup-container">
                 {error}
                 <form onSubmit={this.handleSubmit}>
-                    <h1 className="signin">Join game time!</h1>
-                    <p className="signin-m">Many strangers had played basketball games with each other. Create an account and you'll be on your way to join basketball games. </p>
-                    
-                    <label> 
-                        <input placeholder="First Name" className="input-box" type="text" value={this.state.fname} onChange={this.update('fname')}/>
-                    </label>
-                    <br />
-                    <label>
-                        <input placeholder="Email Address" className="input-box" type="text" value={this.state.email} onChange={this.update('email')}/>
-                    </label>
-                    <br />
-                    <label>
-                        <input placeholder="Password" className="input-box" type="password" value={this.state.password} onChange={this.update('password')}/>
-                    </label>
-                    <br />
-                    <label>
-                        <input placeholder="City" className="input-box" type="type" value={this.state.city_name} onChange={this.update('city_name')}/>
-                    </label>
-                    <br />
-                    <input height="40" className="submit-box" type="submit" value='Join To Play' />
-                    <br />
-                    <p className="switch">{this.props.navLink}</p>
-                    
-                </form>
+                  <h1 className="signin">Join game time!</h1>
+                  <p className="signin-m">
+                    Many strangers had played basketball games with
+                    each other. Create an account and you'll be on
+                    your way to join basketball games.
+                  </p>
 
-            </div>
-            )
+                  <label>
+                    <input placeholder="First Name" className="input-box" type="text" value={this.state.fname} onChange={this.update("fname")} />
+                  </label>
+                  <br />
+                  <label>
+                    <input placeholder="Email Address" className="input-box" type="text" value={this.state.email} onChange={this.update("email")} />
+                  </label>
+                  <br />
+                  <label>
+                    <input placeholder="Password" className="input-box" type="password" value={this.state.password} onChange={this.update("password")} />
+                  </label>
+                  <br />
+                  <label>
+                    <input placeholder="City" className="input-box" type="type" value={this.state.city_name} onChange={this.update("city_name")} />
+                  </label>
+                  <br />
+                  <p>Select a profile image:</p>
+
+                  <div onChange={this.update("image")} value={this.state.image} className="options-profile-img">
+
+                  <div className="profile-image-div">
+                    <input name="prof-img-selector" onChange={this.update("image")} value={this.state.image = "https://www.freevector.com/uploads/vector/preview/3290/FreeVector-Mickey-Mouse-And-Donald-Duck.jpg"} type="radio"  />
+                    <img src="https://www.freevector.com/uploads/vector/preview/3290/FreeVector-Mickey-Mouse-And-Donald-Duck.jpg" />
+                  </div>
+                  <div className="profile-image-div">
+                    <input name="prof-img-selector" onChange={this.update("image")} value={this.state.image = "http://hatobuilico.com/wp-content/uploads/2018/06/basketball-ball-clip-art-basketball-hoop-pictures-free-clipart.jpg"} type="radio"  />
+                    <img src="http://hatobuilico.com/wp-content/uploads/2018/06/basketball-ball-clip-art-basketball-hoop-pictures-free-clipart.jpg" />
+                  </div>
+                  <div className="profile-image-div">
+                    <input name="prof-img-selector" onChange={this.update("image")} value={this.state.image = "https://www.fg-a.com/sports/basketball-fire-black-2018.jpg"} type="radio"  />
+                    <img src="https://www.fg-a.com/sports/basketball-fire-black-2018.jpg" />
+                  </div>
+                  <div className="profile-image-div">
+                    <input name="prof-img-selector" onChange={this.update("image")} value={this.state.image = "https://i.pinimg.com/236x/8c/f1/00/8cf100dc34ff8f0ae71a2ffb25859fb5--sylvester-tweety-classic-cartoons.jpg"} type="radio" />
+                    <img src="https://i.pinimg.com/236x/8c/f1/00/8cf100dc34ff8f0ae71a2ffb25859fb5--sylvester-tweety-classic-cartoons.jpg" />
+                  </div>
+                  <div className="profile-image-div">
+                    <input name="prof-img-selector" onChange={this.update("image")} value={this.state.image = "https://www.wentzville.k12.mo.us/cms/lib/MO02202303/Centricity/Domain/107/mean-basketball_right.png"} type="radio"  />
+                    <img src="https://www.wentzville.k12.mo.us/cms/lib/MO02202303/Centricity/Domain/107/mean-basketball_right.png" />
+                  </div>
+
+                  </div>
+
+                  <br />
+                  <input height="40" className="submit-box" type="submit" value="Join To Play" />
+                  <br />
+                  <p className="switch">{this.props.navLink}</p>
+                </form>
+              </div>;
         }else{
             return(
             <div className="signin-container">

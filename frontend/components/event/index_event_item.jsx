@@ -47,7 +47,7 @@ return (
           </div>
           <div className="card-right">
             <div className="profile-pic-events">
-              <img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/profile-icon.png"/>
+              <img src={props.event.image}/>
             </div>
             {props.event.fname}
           </div>

@@ -25,45 +25,43 @@ const HostDelete = (props) => {
     setTime += "AM"
   }
   return <div className="dash-row">
-    <div className="dash-card">
-      <Link to={`/events/${props.event.id}`}>
-        <div className="top-dash-card">
-          <p className="dash-address1">{weekday}</p>
-          <p className="dash-date">
-            {month} {day}
-          </p>
-          <p className="dash-time">{setTime}</p>
-          <p className="dash-address">{props.event.address}</p>
-        </div>
-      </Link>
+      <div className="dash-card">
+        <Link to={`/events/${props.event.id}`}>
+          <div className="top-dash-card">
+            <p className="dash-address1">{weekday}</p>
+            <p className="dash-date">
+              {month} {day}
+            </p>
+            <p className="dash-time">{setTime}</p>
+            <p className="dash-address">{props.event.address}</p>
+          </div>
+        </Link>
 
-      <div className="bottom-dash-card">
-        <div className="event-select1">
-          <div className="edit-btn"><Link to={`/events/${props.event.id}/edit`}>Edit</Link></div>
-          <div className="edit-btn" onClick={() => props.deleteEvent(props.event.id)}>Delete</div>
+        <div className="bottom-dash-card">
+          <div className="event-select1">
+            <div className="edit-btn">
+              <Link to={`/events/${props.event.id}/edit`}>Edit</Link>
+            </div>
+            <div className="edit-btn" onClick={() => props.deleteEvent(props.event.id)}>
+              Delete
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div className="dash-host">
-      <p>Get to know your host</p>
-      <div className="dash-sub-div">
-        <div className="profile-pic-events">
-          <img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/profile-icon.png" />
+      <div className="dash-host">
+        <p>Your are the Host</p>
+        <div className="dash-sub-div">
+          <div className="profile-pic-events">
+            <img src={props.event.image} />
+          </div>
+          <p>Your are the host good luck with your meet up and your game. :).</p>
         </div>
-        <p>
-          Your are the host good luck with your meet up :).
-          </p>
+        <div className="dash-buttons">
+          <button className="no-cursor-fb">Facebook</button>
+          <button className="no-cursor-twitter">Twitter</button>
+        </div>
       </div>
-      <div className="dash-buttons">
-        <button className="no-cursor-fb">
-          Facebook
-          </button>
-        <button className="no-cursor-twitter">
-          Twitter
-          </button>
-      </div>
-    </div>
-  </div>;
+    </div>;
 
   }
 export default withRouter(HostDelete);

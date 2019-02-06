@@ -50,7 +50,7 @@ const UserLeave = (props) => {
         <p>Get to know your host</p>
         <div className="dash-sub-div">
         <div className="profile-pic-events">
-          <img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/profile-icon.png" />
+          <img src={props.event.image} />
         </div>
           <p>
             Keep an eye open for your {props.event.fname}! So it's easier, here's what they
