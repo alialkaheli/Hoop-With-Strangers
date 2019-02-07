@@ -6,12 +6,12 @@ const EventIndexItem = (props) => {
   let date = new Date(props.event.date).getUTCDay();
   let weekday = weekdays[date];
   const obj = props.event.date.split("-");
-  let yr = obj[0]
+  // let yr = obj[0]
   
   let day = obj[2]
   const monthName = { "01": "JAN", "02": "FEB", "03": "MAR", "04": "APR", "05": "MAY", "06": "JUN", "07": "JUL", "08": "AUG", "09": "SEP", "10": "OCT", "11": "NOV", "12": "DEC" };
   
-  let month = monthName[obj[1]].toString();
+  let month = monthName[obj[1].toString()];
   let ampm = false;
   let setTime = props.event.time.split(":")
 
