@@ -47,7 +47,7 @@ class SessionForm extends React.Component {
     demoLogin(){
         if (this.props.formType === "Sign In"){
           return(
-          <input className="session-submit"
+            <input className="submit-box"
           onClick={() => {
             this.setState  ({
               email: "Guest@guest.com",
@@ -180,7 +180,7 @@ class SessionForm extends React.Component {
                     <br />
                     <input className="submit-box"type="submit" value={this.props.formType} />
                     <br />
-                    <div className="submit-box">{this.demoLogin()}</div>
+                    <div >{this.demoLogin()}</div>
                     <p className="switch">{this.props.navLink}</p>
                     
                 </form>
