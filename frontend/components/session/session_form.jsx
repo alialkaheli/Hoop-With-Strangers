@@ -10,7 +10,8 @@ class SessionForm extends React.Component {
         password: "",
         city_name: "",
         fname: "",
-        image: ""
+        image: "",
+        profPic: 0
       };
       
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -63,6 +64,7 @@ class SessionForm extends React.Component {
     }
 
     render(){
+      console.log(this.state);
         // let fname = ""
         // let city = ""
         // if(this.props.formType == 'signup'){
@@ -114,7 +116,7 @@ class SessionForm extends React.Component {
                   </p>
 
                   <label>
-                    <input placeholder="First Name" className="input-box" type="text" value={this.state.fname} onChange={this.update("fname")} />
+                    <input id="testid" placeholder="First Name" className="input-box" type="text" value={this.state.fname} onChange={this.update("fname")} />
                   </label>
                   <br />
                   <label>
@@ -132,28 +134,41 @@ class SessionForm extends React.Component {
                   <p>Select a profile image:</p>
 
                   <div onChange={this.update("image")} value={this.state.image} className="options-profile-img">
-
-                  <div className="profile-image-div">
-                    <input name="prof-img-selector" onChange={this.update("image")} value={this.state.image = "https://www.freevector.com/uploads/vector/preview/3290/FreeVector-Mickey-Mouse-And-Donald-Duck.jpg"} type="radio"  />
-                    <img src="https://www.freevector.com/uploads/vector/preview/3290/FreeVector-Mickey-Mouse-And-Donald-Duck.jpg" />
-                  </div>
-                  <div className="profile-image-div">
-                    <input name="prof-img-selector" onChange={this.update("image")} value={this.state.image = "http://hatobuilico.com/wp-content/uploads/2018/06/basketball-ball-clip-art-basketball-hoop-pictures-free-clipart.jpg"} type="radio"  />
-                    <img src="http://hatobuilico.com/wp-content/uploads/2018/06/basketball-ball-clip-art-basketball-hoop-pictures-free-clipart.jpg" />
-                  </div>
-                  <div className="profile-image-div">
-                    <input name="prof-img-selector" onChange={this.update("image")} value={this.state.image = "https://www.fg-a.com/sports/basketball-fire-black-2018.jpg"} type="radio"  />
-                    <img src="https://www.fg-a.com/sports/basketball-fire-black-2018.jpg" />
-                  </div>
-                  <div className="profile-image-div">
-                    <input name="prof-img-selector" onChange={this.update("image")} value={this.state.image = "https://i.pinimg.com/236x/8c/f1/00/8cf100dc34ff8f0ae71a2ffb25859fb5--sylvester-tweety-classic-cartoons.jpg"} type="radio" />
-                    <img src="https://i.pinimg.com/236x/8c/f1/00/8cf100dc34ff8f0ae71a2ffb25859fb5--sylvester-tweety-classic-cartoons.jpg" />
-                  </div>
-                  <div className="profile-image-div">
-                    <input name="prof-img-selector" onChange={this.update("image")} value={this.state.image = "https://www.wentzville.k12.mo.us/cms/lib/MO02202303/Centricity/Domain/107/mean-basketball_right.png"} type="radio"  />
-                    <img src="https://www.wentzville.k12.mo.us/cms/lib/MO02202303/Centricity/Domain/107/mean-basketball_right.png" />
-                  </div>
-
+                    <div onClick={() => this.setState({
+                          profPic: 0,
+                          image:
+                            "https://www.freevector.com/uploads/vector/preview/3290/FreeVector-Mickey-Mouse-And-Donald-Duck.jpg"
+                        })} className={"profile-image-div " + (this.state.profPic === 0 ? "selected-class" : "")}>
+                      <img src="https://www.freevector.com/uploads/vector/preview/3290/FreeVector-Mickey-Mouse-And-Donald-Duck.jpg" />
+                    </div>
+                    <div onClick={() => this.setState({
+                          profPic: 1,
+                          image:
+                            "http://hatobuilico.com/wp-content/uploads/2018/06/basketball-ball-clip-art-basketball-hoop-pictures-free-clipart.jpg"
+                        })} className={"profile-image-div " + (this.state.profPic === 1 ? "selected-class" : "")}>
+                      <img src="http://hatobuilico.com/wp-content/uploads/2018/06/basketball-ball-clip-art-basketball-hoop-pictures-free-clipart.jpg" />
+                    </div>
+                    <div onClick={() => this.setState({
+                          profPic: 2,
+                          image:
+                            "https://www.fg-a.com/sports/basketball-fire-black-2018.jpg"
+                        })} className={"profile-image-div " + (this.state.profPic === 2 ? "selected-class" : "")}>
+                      <img src="https://www.fg-a.com/sports/basketball-fire-black-2018.jpg" />
+                    </div>
+                    <div onClick={() => this.setState({
+                          profPic: 3,
+                          image:
+                            "https://i.pinimg.com/236x/8c/f1/00/8cf100dc34ff8f0ae71a2ffb25859fb5--sylvester-tweety-classic-cartoons.jpg"
+                        })} className={"profile-image-div " + (this.state.profPic === 3 ? "selected-class" : "")}>
+                      <img src="https://i.pinimg.com/236x/8c/f1/00/8cf100dc34ff8f0ae71a2ffb25859fb5--sylvester-tweety-classic-cartoons.jpg" />
+                    </div>
+                    <div onClick={() => this.setState({
+                          profPic: 4,
+                          image:
+                            "https://www.wentzville.k12.mo.us/cms/lib/MO02202303/Centricity/Domain/107/mean-basketball_right.png"
+                        })} className={"profile-image-div " + (this.state.profPic === 4 ? "selected-class" : "")}>
+                      <img src="https://www.wentzville.k12.mo.us/cms/lib/MO02202303/Centricity/Domain/107/mean-basketball_right.png" />
+                    </div>
                   </div>
 
                   <br />
