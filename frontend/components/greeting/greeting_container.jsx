@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import greeting from './greeting';
-import {logout, signin} from '../../actions/session_action';
+import {logout, login} from '../../actions/session_action';
 
 const msp = state =>{
     let currentUser = state.entities.users[state.session.id]
@@ -13,7 +13,7 @@ const msp = state =>{
 const mdp = dispatch => {
     return({
         logout: () => dispatch(logout()),
-        signin: (user) => dispatch(signin(user)),
+        signin: (user) => dispatch(login(user)),
     })
 }
 
